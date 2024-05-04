@@ -4,7 +4,7 @@ def binary_search(numbers, search_value):
   low = 0
   high = len(numbers)
 
-  while True:
+  while low <= high:
     mid = math.floor(low + (high - low) / 2)
     value = numbers[mid]
 
@@ -15,11 +15,8 @@ def binary_search(numbers, search_value):
     else:
       high = mid
 
-    if low > high:
-      break
     
   return False
-
 
 
 numbers = [7, 13, 22, 35, 41, 57, 64, 78, 82, 95]
